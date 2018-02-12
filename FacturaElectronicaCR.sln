@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacturaElectronicaCR", "FacturaElectronicaCR\FacturaElectronicaCR.csproj", "{FE5DA04B-05F0-4B89-8024-51D39B440139}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FacturaElectronicaCR_VB", "FacturaElectronicaCR_VB\FacturaElectronicaCR_VB.vbproj", "{AA121E13-C8D8-47F7-970C-C1C0D1B32934}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacturaElectronicaCR_CS", "FacturaElectronicaCR_CS\FacturaElectronicaCR_CS.csproj", "{AFA0696F-555B-4459-BEC8-E98F2CAD9076}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FE5DA04B-05F0-4B89-8024-51D39B440139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FE5DA04B-05F0-4B89-8024-51D39B440139}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FE5DA04B-05F0-4B89-8024-51D39B440139}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FE5DA04B-05F0-4B89-8024-51D39B440139}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA121E13-C8D8-47F7-970C-C1C0D1B32934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA121E13-C8D8-47F7-970C-C1C0D1B32934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA121E13-C8D8-47F7-970C-C1C0D1B32934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA121E13-C8D8-47F7-970C-C1C0D1B32934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFA0696F-555B-4459-BEC8-E98F2CAD9076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFA0696F-555B-4459-BEC8-E98F2CAD9076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFA0696F-555B-4459-BEC8-E98F2CAD9076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFA0696F-555B-4459-BEC8-E98F2CAD9076}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

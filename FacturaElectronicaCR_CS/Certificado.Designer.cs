@@ -1,6 +1,6 @@
 ﻿namespace FacturaElectronicaCR_CS
 {
-    partial class Test
+    partial class Certificado
     {
         /// <summary>
         /// Required designer variable.
@@ -30,10 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.Text = "Certificado";
         }
 
         #endregion
     }
 }
-

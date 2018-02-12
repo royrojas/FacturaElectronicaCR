@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FacturaElectronicaCR_CS
 {
-    public partial class Test : Form
+    public partial class Certificado : Form
     {
-        public Test()
+        public Certificado()
         {
             InitializeComponent();
         }

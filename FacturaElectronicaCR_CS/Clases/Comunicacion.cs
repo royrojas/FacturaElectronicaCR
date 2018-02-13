@@ -7,11 +7,13 @@
 // - XAdES Starter Kit desarrollado por Microsoft Francia
 // - Cambios y funcionalidad para Costa Rica - Roy Rojas - royrojas@dotnetcr.com
 //
+// La clase comunicación fue creada en conjunto con Cristhian Sancho
+//
 // Este programa es software libre: puede redistribuirlo y / o modificarlo
 // bajo los + términos de la Licencia Pública General Reducida de GNU publicada por
 // la Free Software Foundation, ya sea la versión 3 de la licencia, o
 // (a su opción) cualquier versión posterior.
-
+//
 // Este programa se distribuye con la esperanza de que sea útil,
 // pero SIN NINGUNA GARANTÍA; sin siquiera la garantía implícita de
 // COMERCIABILIDAD O IDONEIDAD PARA UN PROPÓSITO PARTICULAR.Ver el

@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 namespace FacturaElectronicaCR_CS.Properties
-{
+{ 
 
 
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 namespace FacturaElectronicaCR_CS.Properties
-{
+{ 
 
 
     /// <summary>

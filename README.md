@@ -69,5 +69,5 @@ Puede descargar los fuentes originales del dll para la Firma en el sitio web y G
       docFirmado.Save((pathXMLFirmado));
 
 ## Contacto
-Roy Rojas | royrojas@dotnetcr.com | royrojas.com | dotnetcr.com
+Roy Rojas | royrojas@dotnetcr.com | www.royrojas.com | www.dotnetcr.com
 

@@ -10,23 +10,23 @@ FirmaXadesNet es una librería desarrollada en C# para la generación de firmas 
 Los cambios necesarios en este ejemplo para la implementacion de la firma XAdES-EPES en Costa Rica las realizó Roy Rojas (royrojas@dotnetcr.com), y la comunicación con el API se trabajó en colaboración con Cristhian Sancho. 
 
 ## Estructura
-En la solucion estan dos proyectos <b>FacturaElectrónica_CS</b> y <b>FacturaElectronica_VB</b>, una para CSharp y otra para Visual Basic .NET. Ambas soluciones hacen lo mismo.
+En la solución están dos proyectos <b>FacturaElectrónica_CS</b> y <b>FacturaElectronica_VB</b>, una para CSharp y otra para Visual Basic .NET. Ambas soluciones hacen lo mismo.
 
 En la carpeta 'Clases' está toda la funcionalidad de la aplicación, y son las que deberías de copiar a tu solución.
 
-- __ClasesJson:__ Contiene las estructuras de los datos que se envian y reciben por parte del API de Hacienda.
+- __ClasesJson:__ Contiene las estructuras de los datos que se envían y reciben por parte del API de Hacienda.
   Tiene 5 clases, Recepcion, Emisor, Receptor, Token y RespuestaHacienda.
 - __Comunicacion:__ Contiene el procedimieto para el envío de los datos al API de Hacienda y el procedimiento para consultar el estado de una factura por la clave.
 - __Firma:__ Contiene las funciones necesarias para la firma del documento electrónico. Utiliza los dlls BouncyCastle.dll, Microsoft.Xades.dll y FirmaXadesNet.dll, que se encuentra en la carpeta COMPONENTES.
 - __Funciones:__ Esta clase contiene unas funciones básicas para convertir de string a Base64 y de Base64 a string, necesario para enviar y recibir los datos en los JSON con el API de Hacienda.
-- __TokenHacienda:__ Esta clase se comunica con el API proporcionado por hacienda para generar el Token necesario para poder entablar la comunicación con el API de Hacienda y poder enviar y recibir información.
+- __TokenHacienda:__ Esta clase se comunica con el API proporcionado por Hacienda para generar el Token necesario para poder entablar la comunicación con el API de facturación y poder enviar y recibir información.
 
 ## Funcionamiento del ejemplo
 En la pantalla se muestran varios campos distribuidos en varios tabs. XML Sin Firmar, XML Firmado, Token Hacienda, JSON Envio, JSON Respuesta, XML Respuesta Hacienda. 
 
-Debes ingresar unicamente el XML Sin Firmar, el programa se encarga de leerlo y llenar los datos en la parte inferior como consecutivo, clave, datos de emisor y receptor.
+Debes ingresar unicamente el __XML Sin Firmar__, el programa se encarga de leerlo y llenar los datos en la parte inferior como consecutivo, clave, datos de emisor y receptor.
 
-Al lado derecho se debe indicar la ruta donde se guardarán los archivos, paso a paso. También debe indicar con cual certificado vas a firmar el xml. Este certificado debe de estar instalado en el repositorio del usuario en la computadora. Los campos de Usuario y Clave son los proporcionados por Hacienda en el ATV.
+Al lado derecho se debe indicar la ruta donde se guardarán los archivos, paso a paso. También debe indicar con cual certificado se va a firmar el xml. Este certificado debe de estar instalado en el repositorio del usuario en la computadora. Los campos de Usuario y Clave son los proporcionados por Hacienda en el ATV.
 
 ## Firma XAdES-EPES
 Puede descargar los fuentes originales del dll para la Firma en el sitio web y GIT del Dpto. de Nuevas Tecnologías de la Concejalía de Urbanismo del Ayuntamiento de Cartagena en España. Para Costa Rica se le realizó unos cambios menores para que funcione correctamente.

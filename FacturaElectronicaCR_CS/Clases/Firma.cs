@@ -55,29 +55,34 @@ namespace FacturaElectronicaCR_CS
                 // 'Ejemplo de un valor Thumbprint: C2E8D9DA714C98ED14B88ECBC4C3E5F3BD64F125
                 // 'Si no se quiere leer el certificado del repositorio, se puede cargar el certificado directamente
                 // 'Dim cert As X509Certificate2 = New X509Certificate2("rutaArchivoCertificado", "clave")
+
                 XadesService xadesService = new XadesService();
                 SignatureParameters parametros = new SignatureParameters();
+
                 parametros.SignaturePolicyInfo = new SignaturePolicyInfo();
-                parametros.SignaturePolicyInfo.PolicyIdentifier = "https://tribunet.hacienda.go.cr/docs/esquemas/2016/v4.1/Resolucion_Comprobantes_Electronicos_DGT-R-48" +
-                "-2016.pdf";
+                parametros.SignaturePolicyInfo.PolicyIdentifier = "https://tribunet.hacienda.go.cr/docs/esquemas/2016/v4.1/Resolucion_Comprobantes_Electronicos_DGT-R-48-2016.pdf";
+                //La propiedad PolicyHash es la misma para todos, es un cálculo en base al archivo pdf indicado en PolicyIdentifier
                 parametros.SignaturePolicyInfo.PolicyHash = "Ohixl6upD6av8N7pEvDABhEL6hM=";
                 parametros.SignaturePackaging = SignaturePackaging.ENVELOPED;
                 parametros.DataFormat = new DataFormat();
                 parametros.Signer = new FirmaXadesNet.Crypto.Signer(cert);
+
                 FileStream fs = new FileStream((pathXML + "_01_SF.xml"), FileMode.Open);
                 FirmaXadesNet.Signature.SignatureDocument docFirmado = xadesService.Sign(fs, parametros);
                 docFirmado.Save((pathXML + "_02_Firmado.xml"));
+
                 // El documento se firma con el dll FirmaXadesNet
-                // Esta libreria fue creada por Departamento de Nuevas Tecnolog�as - Direcci�n General de Urbanismo Ayuntamiento de Cartagena
+                // Esta libreria fue creada por Departamento de Nuevas Tecnologias - Direccion General de Urbanismo Ayuntamiento de Cartagena
                 // 'Fuente original se puede descargar en administracionelectronica.gob.es/ctt/firmaxadesnet
-                // 'La libreria se modific� levemente para que pueda funcionar para Costa Rica.
+                // 'La libreria se modifico levemente para que pueda funcionar para Costa Rica.
                 // 'Cambios por Roy Rojas - royrojas@dotnetcr.com - 06/Febrero/2018
+
                 fs.Close();
                 docFirmado = null;
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
 

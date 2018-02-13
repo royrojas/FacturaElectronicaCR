@@ -24,16 +24,16 @@ Partial Class TestFacturaXMLCR
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.TabPage5 = New System.Windows.Forms.TabPage()
-        Me.TabPage6 = New System.Windows.Forms.TabPage()
         Me.txtXMLSinFirma = New System.Windows.Forms.TextBox()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.txtXMLFirmado = New System.Windows.Forms.TextBox()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.txtTokenHacienda = New System.Windows.Forms.TextBox()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.txtJSONEnvio = New System.Windows.Forms.TextBox()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.txtJSONRespuesta = New System.Windows.Forms.TextBox()
+        Me.TabPage6 = New System.Windows.Forms.TabPage()
         Me.txtRespuestaHacienda = New System.Windows.Forms.TextBox()
         Me.txtConsecutivo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -50,7 +50,6 @@ Partial Class TestFacturaXMLCR
         Me.txtReceptorNumero = New System.Windows.Forms.TextBox()
         Me.txtFolderSalida = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.btnFolderSalida = New System.Windows.Forms.Button()
         Me.Certificado = New System.Windows.Forms.Label()
         Me.txtThumbprint = New System.Windows.Forms.TextBox()
         Me.btnCargaCertificado = New System.Windows.Forms.Button()
@@ -59,6 +58,7 @@ Partial Class TestFacturaXMLCR
         Me.txtAPIClave = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btnConsultaClave = New System.Windows.Forms.Button()
+        Me.btnFolderSalida = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -93,57 +93,6 @@ Partial Class TestFacturaXMLCR
         Me.TabPage1.Text = "XML Sin Firmar"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'TabPage2
-        '
-        Me.TabPage2.Controls.Add(Me.txtXMLFirmado)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(807, 358)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "XML Firmado"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'TabPage3
-        '
-        Me.TabPage3.Controls.Add(Me.txtTokenHacienda)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(807, 358)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Token Hacienda"
-        Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'TabPage4
-        '
-        Me.TabPage4.Controls.Add(Me.txtJSONEnvio)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(807, 358)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "JSON Envio"
-        Me.TabPage4.UseVisualStyleBackColor = True
-        '
-        'TabPage5
-        '
-        Me.TabPage5.Controls.Add(Me.txtJSONRespuesta)
-        Me.TabPage5.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(807, 358)
-        Me.TabPage5.TabIndex = 4
-        Me.TabPage5.Text = "JSON Respuesta"
-        Me.TabPage5.UseVisualStyleBackColor = True
-        '
-        'TabPage6
-        '
-        Me.TabPage6.Controls.Add(Me.txtRespuestaHacienda)
-        Me.TabPage6.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage6.Name = "TabPage6"
-        Me.TabPage6.Size = New System.Drawing.Size(807, 358)
-        Me.TabPage6.TabIndex = 5
-        Me.TabPage6.Text = "XML Respuesta Hacienda"
-        Me.TabPage6.UseVisualStyleBackColor = True
-        '
         'txtXMLSinFirma
         '
         Me.txtXMLSinFirma.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -155,6 +104,17 @@ Partial Class TestFacturaXMLCR
         Me.txtXMLSinFirma.ScrollBars = System.Windows.Forms.ScrollBars.Both
         Me.txtXMLSinFirma.Size = New System.Drawing.Size(801, 352)
         Me.txtXMLSinFirma.TabIndex = 0
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.txtXMLFirmado)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(807, 358)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "XML Firmado"
+        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'txtXMLFirmado
         '
@@ -169,6 +129,16 @@ Partial Class TestFacturaXMLCR
         Me.txtXMLFirmado.Size = New System.Drawing.Size(805, 352)
         Me.txtXMLFirmado.TabIndex = 1
         '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.txtTokenHacienda)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Size = New System.Drawing.Size(807, 358)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "Token Hacienda"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
         'txtTokenHacienda
         '
         Me.txtTokenHacienda.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -181,6 +151,16 @@ Partial Class TestFacturaXMLCR
         Me.txtTokenHacienda.ScrollBars = System.Windows.Forms.ScrollBars.Both
         Me.txtTokenHacienda.Size = New System.Drawing.Size(801, 352)
         Me.txtTokenHacienda.TabIndex = 1
+        '
+        'TabPage4
+        '
+        Me.TabPage4.Controls.Add(Me.txtJSONEnvio)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Size = New System.Drawing.Size(807, 358)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "JSON Envio"
+        Me.TabPage4.UseVisualStyleBackColor = True
         '
         'txtJSONEnvio
         '
@@ -195,6 +175,16 @@ Partial Class TestFacturaXMLCR
         Me.txtJSONEnvio.Size = New System.Drawing.Size(801, 352)
         Me.txtJSONEnvio.TabIndex = 1
         '
+        'TabPage5
+        '
+        Me.TabPage5.Controls.Add(Me.txtJSONRespuesta)
+        Me.TabPage5.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Size = New System.Drawing.Size(807, 358)
+        Me.TabPage5.TabIndex = 4
+        Me.TabPage5.Text = "JSON Respuesta"
+        Me.TabPage5.UseVisualStyleBackColor = True
+        '
         'txtJSONRespuesta
         '
         Me.txtJSONRespuesta.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -207,6 +197,16 @@ Partial Class TestFacturaXMLCR
         Me.txtJSONRespuesta.ScrollBars = System.Windows.Forms.ScrollBars.Both
         Me.txtJSONRespuesta.Size = New System.Drawing.Size(801, 352)
         Me.txtJSONRespuesta.TabIndex = 1
+        '
+        'TabPage6
+        '
+        Me.TabPage6.Controls.Add(Me.txtRespuestaHacienda)
+        Me.TabPage6.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage6.Name = "TabPage6"
+        Me.TabPage6.Size = New System.Drawing.Size(807, 358)
+        Me.TabPage6.TabIndex = 5
+        Me.TabPage6.Text = "XML Respuesta Hacienda"
+        Me.TabPage6.UseVisualStyleBackColor = True
         '
         'txtRespuestaHacienda
         '
@@ -347,15 +347,6 @@ Partial Class TestFacturaXMLCR
         Me.Label7.TabIndex = 15
         Me.Label7.Text = "Folder archivos de salida"
         '
-        'btnFolderSalida
-        '
-        Me.btnFolderSalida.Location = New System.Drawing.Point(1097, 55)
-        Me.btnFolderSalida.Name = "btnFolderSalida"
-        Me.btnFolderSalida.Size = New System.Drawing.Size(27, 22)
-        Me.btnFolderSalida.TabIndex = 16
-        Me.btnFolderSalida.Text = "..."
-        Me.btnFolderSalida.UseVisualStyleBackColor = True
-        '
         'Certificado
         '
         Me.Certificado.AutoSize = True
@@ -422,11 +413,21 @@ Partial Class TestFacturaXMLCR
         Me.btnConsultaClave.Text = "Consultar por Clave"
         Me.btnConsultaClave.UseVisualStyleBackColor = True
         '
+        'btnFolderSalida
+        '
+        Me.btnFolderSalida.Location = New System.Drawing.Point(1097, 55)
+        Me.btnFolderSalida.Name = "btnFolderSalida"
+        Me.btnFolderSalida.Size = New System.Drawing.Size(27, 22)
+        Me.btnFolderSalida.TabIndex = 25
+        Me.btnFolderSalida.Text = "..."
+        Me.btnFolderSalida.UseVisualStyleBackColor = True
+        '
         'TestFacturaXMLCR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1140, 484)
+        Me.Controls.Add(Me.btnFolderSalida)
         Me.Controls.Add(Me.btnConsultaClave)
         Me.Controls.Add(Me.txtAPIClave)
         Me.Controls.Add(Me.Label9)
@@ -435,7 +436,6 @@ Partial Class TestFacturaXMLCR
         Me.Controls.Add(Me.btnCargaCertificado)
         Me.Controls.Add(Me.txtThumbprint)
         Me.Controls.Add(Me.Certificado)
-        Me.Controls.Add(Me.btnFolderSalida)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txtFolderSalida)
         Me.Controls.Add(Me.Label5)
@@ -502,7 +502,6 @@ Partial Class TestFacturaXMLCR
     Friend WithEvents txtReceptorNumero As TextBox
     Friend WithEvents txtFolderSalida As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents btnFolderSalida As Button
     Friend WithEvents Certificado As Label
     Friend WithEvents txtThumbprint As TextBox
     Friend WithEvents btnCargaCertificado As Button
@@ -511,4 +510,5 @@ Partial Class TestFacturaXMLCR
     Friend WithEvents txtAPIClave As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents btnConsultaClave As Button
+    Friend WithEvents btnFolderSalida As Button
 End Class

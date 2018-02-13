@@ -55,9 +55,9 @@ Public Class Comunicacion
             JsonObject.Add(New JProperty("clave", objRecepcion.clave))
             JsonObject.Add(New JProperty("fecha", objRecepcion.fecha))
             JsonObject.Add(New JProperty("emisor", New JObject(New JProperty("tipoIdentificacion", objRecepcion.emisor.TipoIdentificacion),
-                                                              New JProperty("numeroIdentificacion", objRecepcion.emisor.numeroIdentificacion))))
+                                                               New JProperty("numeroIdentificacion", objRecepcion.emisor.numeroIdentificacion))))
             JsonObject.Add(New JProperty("receptor", New JObject(New JProperty("tipoIdentificacion", objRecepcion.receptor.TipoIdentificacion),
-                                                              New JProperty("numeroIdentificacion", objRecepcion.receptor.numeroIdentificacion))))
+                                                                 New JProperty("numeroIdentificacion", objRecepcion.receptor.numeroIdentificacion))))
             JsonObject.Add(New JProperty("comprobanteXml", objRecepcion.comprobanteXml))
 
             jsonEnvio = JsonObject.ToString
@@ -90,7 +90,6 @@ Public Class Comunicacion
 
             mensajeRespuesta = "Confirmación: " & statusCode & vbCrLf
             mensajeRespuesta += "Estado: " & estadoFactura
-
         Catch e As Exception
             Throw
         End Try

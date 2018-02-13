@@ -16,7 +16,6 @@ Public Class TokenHacienda
             Dim http As HttpClient = New HttpClient
             Dim param = New List(Of KeyValuePair(Of String, String))()
             param.Add(New KeyValuePair(Of String, String)("client_id", IDP_CLIENT_ID))
-
             param.Add(New KeyValuePair(Of String, String)("grant_type", "password"))
             param.Add(New KeyValuePair(Of String, String)("username", usuario))
             param.Add(New KeyValuePair(Of String, String)("password", password))

@@ -47,7 +47,7 @@ Public Class Certificado
             thumbprint = grdCertificados.Rows(e.RowIndex).Cells(1).Value
             Me.Close()
         Catch ex As Exception
-
+            Throw
         End Try
     End Sub
 

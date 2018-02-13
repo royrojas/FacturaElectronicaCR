@@ -1,6 +1,12 @@
 ﻿Public Class TestFacturaXMLCR
     Private Sub btnProcesar_Click(sender As Object, e As EventArgs) Handles btnProcesar.Click
         Try
+            If Me.txtXMLSinFirma.Text.Trim.Length = 0 Then
+                MsgBox("Debe ingresar el XML Sin Firmar")
+                Me.txtXMLSinFirma.Focus()
+                Exit Sub
+            End If
+
             CargaDatosXML()
 
             If Me.txtThumbprint.Text.Trim.Length = 0 Then
@@ -89,8 +95,6 @@
         myRecepcion.comprobanteXml = Funciones.EncodeStrToBase64(xmlElectronica.OuterXml)
 
         xmlElectronica = Nothing
-
-        Dim msgError As String = ""
 
         Dim Token As String = ""
         Token = getToken()

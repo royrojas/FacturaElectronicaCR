@@ -7,7 +7,7 @@ En la carpeta COMPONENTES estan los dlls necesarios para realizar la firma elect
 
 FirmaXadesNet es una librería desarrollada en C# para la generación de firmas XAdES realizada por el Dpto. de Nuevas Tecnologías de la Concejalía de Urbanismo del Ayuntamiento de Cartagena en España, la cual está basada en una modificación del XAdES starter kit desarrollado por Microsoft Francia. 
 
-Los cambios necesarios en este ejemplo para la implementacion de la firma XAdES-EPES en Costa Rica las realizó Roy Rojas (royrojas@dotnetcr.com), en el ejemplo original le agregaba unos nodos de emisor que no son necesarios y el DataFormat cuando se compila para Framework 4.5 daba error al ejecutarlo. La comunicación con el API se trabajó en colaboración con Cristhian Sancho. 
+Los cambios necesarios en este ejemplo para la implementacion de la firma XAdES-EPES en Costa Rica las realizó Roy Rojas (royrojas@dotnetcr.com), en el ejemplo original se agregaban unos nodos de emisor que no son necesarios y el DataFormat cuando se compila para Framework 4.5 daba error al ejecutarlo. La comunicación con el API se trabajó en colaboración con Cristhian Sancho. 
 
 ## Estructura
 En la solución están dos proyectos <b>FacturaElectrónica_CS</b> y <b>FacturaElectronica_VB</b>, una para CSharp y otra para Visual Basic .NET. Ambas soluciones hacen lo mismo.

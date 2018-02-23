@@ -29,7 +29,7 @@ Debes ingresar unicamente el __XML Sin Firmar__, el programa se encarga de leerl
 Al lado derecho se debe indicar la ruta donde se guardarán los archivos, paso a paso. También debe indicar con cual certificado se va a firmar el xml. Este certificado debe de estar instalado en el repositorio del usuario en la computadora. Los campos de Usuario y Clave son los proporcionados por Hacienda en el ATV.
 
 ## Firma XAdES-EPES
-Puede descargar los fuentes originales del dll para la Firma en el sitio web y GIT del Dpto. de Nuevas Tecnologías de la Concejalía de Urbanismo del Ayuntamiento de Cartagena en España. Para Costa Rica se le realizó unos cambios menores para que funcione correctamente.
+Puede descargar los fuentes originales del dll para la Firma en el sitio web y GIT del Dpto. de Nuevas Tecnologías de la Concejalía de Urbanismo del Ayuntamiento de Cartagena en España.
 - https://github.com/ctt-gob-es/FirmaXadesNet45 
 - https://administracionelectronica.gob.es/ctt/firmaxadesnet
 

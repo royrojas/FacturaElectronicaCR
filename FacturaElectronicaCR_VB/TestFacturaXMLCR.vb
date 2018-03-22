@@ -35,9 +35,11 @@
             Me.txtEmisorNumero.Text = xmlEnvia.GetElementsByTagName("Emisor")(0)("Identificacion")("Numero").InnerText
             Me.txtEmisorTipo.Text = xmlEnvia.GetElementsByTagName("Emisor")(0)("Identificacion")("Tipo").InnerText
 
-            If Not IsNothing(xmlEnvia.GetElementsByTagName("Receptor")(0)("Identificacion")) Then
-                Me.txtReceptorNumero.Text = xmlEnvia.GetElementsByTagName("Receptor")(0)("Identificacion")("Numero").InnerText
-                Me.txtReceptorTipo.Text = xmlEnvia.GetElementsByTagName("Receptor")(0)("Identificacion")("Tipo").InnerText
+            If xmlEnvia.GetElementsByTagName("Receptor").Count > 0 Then
+                If Not IsNothing(xmlEnvia.GetElementsByTagName("Receptor")(0)("Identificacion")) Then
+                    Me.txtReceptorNumero.Text = xmlEnvia.GetElementsByTagName("Receptor")(0)("Identificacion")("Numero").InnerText
+                    Me.txtReceptorTipo.Text = xmlEnvia.GetElementsByTagName("Receptor")(0)("Identificacion")("Tipo").InnerText
+                End If
             End If
 
             Me.txtFecha.Text = xmlEnvia.GetElementsByTagName("FechaEmision")(0).InnerText

@@ -9,7 +9,7 @@
 
             CargaDatosXML()
 
-            If Me.txtThumbprint.Text.Trim.Length = 0 Then
+            If Me.txtThumbprint.Text.Trim.Length = 0 And rbCertInstalado.Checked Then
                 MsgBox("Debe indicar el certificado a usar en la firma")
                 CargaCertificado()
             End If
@@ -34,8 +34,13 @@
             Me.txtClave.Text = xmlEnvia.GetElementsByTagName("Clave")(0).InnerText
             Me.txtEmisorNumero.Text = xmlEnvia.GetElementsByTagName("Emisor")(0)("Identificacion")("Numero").InnerText
             Me.txtEmisorTipo.Text = xmlEnvia.GetElementsByTagName("Emisor")(0)("Identificacion")("Tipo").InnerText
-            Me.txtReceptorNumero.Text = xmlEnvia.GetElementsByTagName("Receptor")(0)("Identificacion")("Numero").InnerText
-            Me.txtReceptorTipo.Text = xmlEnvia.GetElementsByTagName("Receptor")(0)("Identificacion")("Tipo").InnerText
+
+            If Not IsNothing(xmlEnvia.GetElementsByTagName("Receptor")(0)("Identificacion")) Then
+                Me.txtReceptorNumero.Text = xmlEnvia.GetElementsByTagName("Receptor")(0)("Identificacion")("Numero").InnerText
+                Me.txtReceptorTipo.Text = xmlEnvia.GetElementsByTagName("Receptor")(0)("Identificacion")("Tipo").InnerText
+            End If
+
+            Me.txtFecha.Text = xmlEnvia.GetElementsByTagName("FechaEmision")(0).InnerText
         Catch ex As Exception
             Throw
         End Try
@@ -48,7 +53,7 @@
         Me.txtEmisorTipo.ResetText()
         Me.txtReceptorNumero.ResetText()
         Me.txtReceptorTipo.ResetText()
-
+        Me.txtFecha.ResetText()
         Me.txtXMLFirmado.ResetText()
         Me.txtJSONEnvio.ResetText()
         Me.txtJSONRespuesta.ResetText()
@@ -76,8 +81,15 @@
         xmlTextWriter.Close()
         xmlDocSF = Nothing
 
+        Dim certificado As String = ""
+        If rbCertInstalado.Checked Then
+            certificado = txtThumbprint.Text
+        Else
+            certificado = txtPathCertificado.Text
+        End If
+
         Dim _firma As New Firma
-        _firma.FirmaXML_Xades(directorio & nombreArchivo, Me.txtThumbprint.Text)
+        _firma.FirmaXML_Xades(directorio & nombreArchivo, certificado, rbCertInstalado.Checked, txtCertificadoPIN.Text)
 
         Dim xmlElectronica As New Xml.XmlDocument
         xmlElectronica.Load(directorio & nombreArchivo & "_02_Firmado.xml")
@@ -85,13 +97,21 @@
         Me.txtXMLFirmado.Text = xmlElectronica.OuterXml
 
         Dim myEmisor As New Emisor With {.numeroIdentificacion = Me.txtEmisorNumero.Text, .TipoIdentificacion = Me.txtEmisorTipo.Text}
-        Dim myReceptor As New Receptor With {.numeroIdentificacion = Me.txtReceptorNumero.Text, .TipoIdentificacion = Me.txtReceptorTipo.Text}
+
+        Dim myReceptor As New Receptor
+        If Me.txtReceptorNumero.Text.Trim.Length > 0 Then
+            myReceptor = New Receptor With {.numeroIdentificacion = Me.txtReceptorNumero.Text, .TipoIdentificacion = Me.txtReceptorTipo.Text}
+        Else
+            myReceptor.sinReceptor = True
+        End If
+
         Dim myRecepcion As New Recepcion
         myRecepcion.emisor = myEmisor
         myRecepcion.receptor = myReceptor
 
         myRecepcion.clave = Me.txtClave.Text
-        myRecepcion.fecha = Now.ToString("yyyy-MM-ddTHH:mm:sszzz")
+        myRecepcion.fecha = Me.txtFecha.Text
+        ''Now.ToString("yyyy-MM-ddTHH:mm:sszzz")
         myRecepcion.comprobanteXml = Funciones.EncodeStrToBase64(xmlElectronica.OuterXml)
 
         xmlElectronica = Nothing
@@ -128,8 +148,8 @@
             outputFile.Close()
 
             Me.txtRespuestaHacienda.Text = "Consulte en unos minutos, factura se está procesando."
-            Me.txtRespuestaHacienda.Text += vbCrLf & vbCrLf & "Consulte por Clave"
             Me.txtRespuestaHacienda.Text += vbCrLf & vbCrLf & enviaFactura.mensajeRespuesta
+            Me.txtRespuestaHacienda.Text += vbCrLf & vbCrLf & "Consulte por Clave"
         End If
 
         MsgBox(enviaFactura.mensajeRespuesta)
@@ -237,6 +257,40 @@
             End If
         Catch ex As Exception
             Throw
+        End Try
+    End Sub
+
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        LimpiaDatos()
+    End Sub
+
+    Private Sub rbCertInstalado_CheckedChanged(sender As Object, e As EventArgs) Handles rbCertInstalado.CheckedChanged, rbArchivo.CheckedChanged
+        Try
+            If rbCertInstalado.Checked Then
+                txtThumbprint.Enabled = True
+                btnCargaCertificado.Enabled = True
+                txtPathCertificado.Enabled = False
+                btnRutaCertificado.Enabled = False
+                txtCertificadoPIN.Enabled = False
+            Else
+                txtThumbprint.Enabled = False
+                btnCargaCertificado.Enabled = False
+                txtPathCertificado.Enabled = True
+                btnRutaCertificado.Enabled = True
+                txtCertificadoPIN.Enabled = True
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub btnRutaCertificado_Click(sender As Object, e As EventArgs) Handles btnRutaCertificado.Click
+        Try
+            Dim iFile As New OpenFileDialog
+            iFile.ShowDialog()
+            Me.txtPathCertificado.Text = iFile.FileName
+        Catch ex As Exception
+            MsgBox(ex.Message)
         End Try
     End Sub
 

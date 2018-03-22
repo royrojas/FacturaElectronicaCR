@@ -58,8 +58,10 @@ Public Class Comunicacion
             JsonObject.Add(New JProperty("fecha", objRecepcion.fecha))
             JsonObject.Add(New JProperty("emisor", New JObject(New JProperty("tipoIdentificacion", objRecepcion.emisor.TipoIdentificacion),
                                                                New JProperty("numeroIdentificacion", objRecepcion.emisor.numeroIdentificacion))))
-            JsonObject.Add(New JProperty("receptor", New JObject(New JProperty("tipoIdentificacion", objRecepcion.receptor.TipoIdentificacion),
+            If objRecepcion.receptor.sinReceptor = False Then
+                JsonObject.Add(New JProperty("receptor", New JObject(New JProperty("tipoIdentificacion", objRecepcion.receptor.TipoIdentificacion),
                                                                  New JProperty("numeroIdentificacion", objRecepcion.receptor.numeroIdentificacion))))
+            End If
             JsonObject.Add(New JProperty("comprobanteXml", objRecepcion.comprobanteXml))
 
             jsonEnvio = JsonObject.ToString
@@ -71,8 +73,7 @@ Public Class Comunicacion
             Dim response As HttpResponseMessage = http.PostAsync(URL_RECEPCION + "recepcion", oString).Result
             Dim res As String = response.Content.ReadAsStringAsync.Result
 
-            Dim Localizacion = response.StatusCode
-            ''mensajeRespuesta = Localizacion
+            mensajeRespuesta = "Recibido: " & response.StatusCode & vbCrLf & vbCrLf
 
             http = New HttpClient
             http.DefaultRequestHeaders.Add("authorization", "Bearer " + TK)
@@ -90,7 +91,7 @@ Public Class Comunicacion
             estadoFactura = RH.ind_estado
             statusCode = response.StatusCode
 
-            mensajeRespuesta = "Confirmación: " & statusCode & vbCrLf
+            mensajeRespuesta += "Confirmación: " & statusCode & vbCrLf
             mensajeRespuesta += "Estado: " & estadoFactura
         Catch e As Exception
             Throw

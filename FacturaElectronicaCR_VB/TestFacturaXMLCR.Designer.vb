@@ -24,7 +24,7 @@ Partial Class TestFacturaXMLCR
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.txtXMLSinFirma = New System.Windows.Forms.TextBox()
+        Me.txtXMLSinFirma = New System.Windows.Forms.RichTextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.txtXMLFirmado = New System.Windows.Forms.TextBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -59,6 +59,17 @@ Partial Class TestFacturaXMLCR
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btnConsultaClave = New System.Windows.Forms.Button()
         Me.btnFolderSalida = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtFecha = New System.Windows.Forms.TextBox()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.btnRutaCertificado = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txtPathCertificado = New System.Windows.Forms.TextBox()
+        Me.rbCertInstalado = New System.Windows.Forms.RadioButton()
+        Me.rbArchivo = New System.Windows.Forms.RadioButton()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.txtCertificadoPIN = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -95,15 +106,11 @@ Partial Class TestFacturaXMLCR
         '
         'txtXMLSinFirma
         '
-        Me.txtXMLSinFirma.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtXMLSinFirma.Location = New System.Drawing.Point(3, 3)
-        Me.txtXMLSinFirma.Multiline = True
+        Me.txtXMLSinFirma.Location = New System.Drawing.Point(0, 0)
         Me.txtXMLSinFirma.Name = "txtXMLSinFirma"
-        Me.txtXMLSinFirma.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtXMLSinFirma.Size = New System.Drawing.Size(801, 352)
-        Me.txtXMLSinFirma.TabIndex = 0
+        Me.txtXMLSinFirma.Size = New System.Drawing.Size(807, 358)
+        Me.txtXMLSinFirma.TabIndex = 29
+        Me.txtXMLSinFirma.Text = ""
         '
         'TabPage2
         '
@@ -241,7 +248,7 @@ Partial Class TestFacturaXMLCR
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(266, 402)
+        Me.Label2.Location = New System.Drawing.Point(263, 402)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(34, 13)
         Me.Label2.TabIndex = 4
@@ -249,9 +256,9 @@ Partial Class TestFacturaXMLCR
         '
         'txtClave
         '
-        Me.txtClave.Location = New System.Drawing.Point(307, 399)
+        Me.txtClave.Location = New System.Drawing.Point(304, 399)
         Me.txtClave.Name = "txtClave"
-        Me.txtClave.Size = New System.Drawing.Size(495, 20)
+        Me.txtClave.Size = New System.Drawing.Size(338, 20)
         Me.txtClave.TabIndex = 3
         '
         'btnProcesar
@@ -283,7 +290,7 @@ Partial Class TestFacturaXMLCR
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(266, 428)
+        Me.Label4.Location = New System.Drawing.Point(263, 428)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(28, 13)
         Me.Label4.TabIndex = 9
@@ -291,7 +298,7 @@ Partial Class TestFacturaXMLCR
         '
         'txtEmisorTipo
         '
-        Me.txtEmisorTipo.Location = New System.Drawing.Point(307, 425)
+        Me.txtEmisorTipo.Location = New System.Drawing.Point(304, 425)
         Me.txtEmisorTipo.Name = "txtEmisorTipo"
         Me.txtEmisorTipo.ReadOnly = True
         Me.txtEmisorTipo.Size = New System.Drawing.Size(35, 20)
@@ -300,7 +307,7 @@ Partial Class TestFacturaXMLCR
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(617, 428)
+        Me.Label5.Location = New System.Drawing.Point(614, 428)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(28, 13)
         Me.Label5.TabIndex = 13
@@ -308,7 +315,7 @@ Partial Class TestFacturaXMLCR
         '
         'txtReceptorTipo
         '
-        Me.txtReceptorTipo.Location = New System.Drawing.Point(658, 425)
+        Me.txtReceptorTipo.Location = New System.Drawing.Point(655, 425)
         Me.txtReceptorTipo.Name = "txtReceptorTipo"
         Me.txtReceptorTipo.ReadOnly = True
         Me.txtReceptorTipo.Size = New System.Drawing.Size(35, 20)
@@ -317,7 +324,7 @@ Partial Class TestFacturaXMLCR
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(364, 428)
+        Me.Label6.Location = New System.Drawing.Point(361, 428)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(91, 13)
         Me.Label6.TabIndex = 11
@@ -325,7 +332,7 @@ Partial Class TestFacturaXMLCR
         '
         'txtReceptorNumero
         '
-        Me.txtReceptorNumero.Location = New System.Drawing.Point(459, 425)
+        Me.txtReceptorNumero.Location = New System.Drawing.Point(456, 425)
         Me.txtReceptorNumero.Name = "txtReceptorNumero"
         Me.txtReceptorNumero.ReadOnly = True
         Me.txtReceptorNumero.Size = New System.Drawing.Size(143, 20)
@@ -350,7 +357,7 @@ Partial Class TestFacturaXMLCR
         'Certificado
         '
         Me.Certificado.AutoSize = True
-        Me.Certificado.Location = New System.Drawing.Point(833, 83)
+        Me.Certificado.Location = New System.Drawing.Point(833, 86)
         Me.Certificado.Name = "Certificado"
         Me.Certificado.Size = New System.Drawing.Size(57, 13)
         Me.Certificado.TabIndex = 17
@@ -358,14 +365,14 @@ Partial Class TestFacturaXMLCR
         '
         'txtThumbprint
         '
-        Me.txtThumbprint.Location = New System.Drawing.Point(833, 100)
+        Me.txtThumbprint.Location = New System.Drawing.Point(833, 124)
         Me.txtThumbprint.Name = "txtThumbprint"
         Me.txtThumbprint.Size = New System.Drawing.Size(264, 20)
         Me.txtThumbprint.TabIndex = 18
         '
         'btnCargaCertificado
         '
-        Me.btnCargaCertificado.Location = New System.Drawing.Point(1097, 99)
+        Me.btnCargaCertificado.Location = New System.Drawing.Point(1097, 123)
         Me.btnCargaCertificado.Name = "btnCargaCertificado"
         Me.btnCargaCertificado.Size = New System.Drawing.Size(27, 22)
         Me.btnCargaCertificado.TabIndex = 19
@@ -375,7 +382,7 @@ Partial Class TestFacturaXMLCR
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(833, 127)
+        Me.Label8.Location = New System.Drawing.Point(833, 196)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(112, 13)
         Me.Label8.TabIndex = 20
@@ -383,14 +390,14 @@ Partial Class TestFacturaXMLCR
         '
         'txtAPIUsuario
         '
-        Me.txtAPIUsuario.Location = New System.Drawing.Point(833, 143)
+        Me.txtAPIUsuario.Location = New System.Drawing.Point(833, 212)
         Me.txtAPIUsuario.Name = "txtAPIUsuario"
         Me.txtAPIUsuario.Size = New System.Drawing.Size(264, 20)
         Me.txtAPIUsuario.TabIndex = 21
         '
         'txtAPIClave
         '
-        Me.txtAPIClave.Location = New System.Drawing.Point(833, 186)
+        Me.txtAPIClave.Location = New System.Drawing.Point(833, 255)
         Me.txtAPIClave.Name = "txtAPIClave"
         Me.txtAPIClave.Size = New System.Drawing.Size(264, 20)
         Me.txtAPIClave.TabIndex = 23
@@ -398,7 +405,7 @@ Partial Class TestFacturaXMLCR
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(833, 170)
+        Me.Label9.Location = New System.Drawing.Point(833, 239)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(103, 13)
         Me.Label9.TabIndex = 22
@@ -406,9 +413,9 @@ Partial Class TestFacturaXMLCR
         '
         'btnConsultaClave
         '
-        Me.btnConsultaClave.Location = New System.Drawing.Point(307, 451)
+        Me.btnConsultaClave.Location = New System.Drawing.Point(158, 451)
         Me.btnConsultaClave.Name = "btnConsultaClave"
-        Me.btnConsultaClave.Size = New System.Drawing.Size(261, 23)
+        Me.btnConsultaClave.Size = New System.Drawing.Size(141, 23)
         Me.btnConsultaClave.TabIndex = 24
         Me.btnConsultaClave.Text = "Consultar por Clave"
         Me.btnConsultaClave.UseVisualStyleBackColor = True
@@ -422,11 +429,120 @@ Partial Class TestFacturaXMLCR
         Me.btnFolderSalida.Text = "..."
         Me.btnFolderSalida.UseVisualStyleBackColor = True
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(660, 401)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(37, 13)
+        Me.Label10.TabIndex = 27
+        Me.Label10.Text = "Fecha"
+        '
+        'txtFecha
+        '
+        Me.txtFecha.Location = New System.Drawing.Point(703, 398)
+        Me.txtFecha.Name = "txtFecha"
+        Me.txtFecha.ReadOnly = True
+        Me.txtFecha.Size = New System.Drawing.Size(120, 20)
+        Me.txtFecha.TabIndex = 26
+        '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.Location = New System.Drawing.Point(303, 451)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(141, 23)
+        Me.btnLimpiar.TabIndex = 28
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
+        '
+        'btnRutaCertificado
+        '
+        Me.btnRutaCertificado.Location = New System.Drawing.Point(1097, 167)
+        Me.btnRutaCertificado.Name = "btnRutaCertificado"
+        Me.btnRutaCertificado.Size = New System.Drawing.Size(27, 22)
+        Me.btnRutaCertificado.TabIndex = 31
+        Me.btnRutaCertificado.Text = "..."
+        Me.btnRutaCertificado.UseVisualStyleBackColor = True
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(833, 152)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(82, 13)
+        Me.Label11.TabIndex = 30
+        Me.Label11.Text = "Ruta certificado"
+        '
+        'txtPathCertificado
+        '
+        Me.txtPathCertificado.Location = New System.Drawing.Point(833, 168)
+        Me.txtPathCertificado.Name = "txtPathCertificado"
+        Me.txtPathCertificado.Size = New System.Drawing.Size(210, 20)
+        Me.txtPathCertificado.TabIndex = 29
+        '
+        'rbCertInstalado
+        '
+        Me.rbCertInstalado.AutoSize = True
+        Me.rbCertInstalado.Location = New System.Drawing.Point(903, 83)
+        Me.rbCertInstalado.Name = "rbCertInstalado"
+        Me.rbCertInstalado.Size = New System.Drawing.Size(119, 17)
+        Me.rbCertInstalado.TabIndex = 32
+        Me.rbCertInstalado.Text = "Instalado repositorio"
+        Me.rbCertInstalado.UseVisualStyleBackColor = True
+        '
+        'rbArchivo
+        '
+        Me.rbArchivo.AutoSize = True
+        Me.rbArchivo.Checked = True
+        Me.rbArchivo.Location = New System.Drawing.Point(1030, 83)
+        Me.rbArchivo.Name = "rbArchivo"
+        Me.rbArchivo.Size = New System.Drawing.Size(61, 17)
+        Me.rbArchivo.TabIndex = 33
+        Me.rbArchivo.TabStop = True
+        Me.rbArchivo.Text = "Archivo"
+        Me.rbArchivo.UseVisualStyleBackColor = True
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(833, 108)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(102, 13)
+        Me.Label12.TabIndex = 34
+        Me.Label12.Text = "Certificado instalado"
+        '
+        'txtCertificadoPIN
+        '
+        Me.txtCertificadoPIN.Location = New System.Drawing.Point(1045, 168)
+        Me.txtCertificadoPIN.Name = "txtCertificadoPIN"
+        Me.txtCertificadoPIN.Size = New System.Drawing.Size(52, 20)
+        Me.txtCertificadoPIN.TabIndex = 35
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(1045, 151)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(25, 13)
+        Me.Label13.TabIndex = 36
+        Me.Label13.Text = "PIN"
+        '
         'TestFacturaXMLCR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1140, 484)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.txtCertificadoPIN)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.rbArchivo)
+        Me.Controls.Add(Me.rbCertInstalado)
+        Me.Controls.Add(Me.btnRutaCertificado)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.txtPathCertificado)
+        Me.Controls.Add(Me.btnLimpiar)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.txtFecha)
         Me.Controls.Add(Me.btnFolderSalida)
         Me.Controls.Add(Me.btnConsultaClave)
         Me.Controls.Add(Me.txtAPIClave)
@@ -458,7 +574,6 @@ Partial Class TestFacturaXMLCR
         Me.Text = "Factura Electronica CR"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
@@ -476,7 +591,6 @@ Partial Class TestFacturaXMLCR
 
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents txtXMLSinFirma As TextBox
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents txtXMLFirmado As TextBox
     Friend WithEvents TabPage3 As TabPage
@@ -511,4 +625,16 @@ Partial Class TestFacturaXMLCR
     Friend WithEvents Label9 As Label
     Friend WithEvents btnConsultaClave As Button
     Friend WithEvents btnFolderSalida As Button
+    Friend WithEvents Label10 As Label
+    Friend WithEvents txtFecha As TextBox
+    Friend WithEvents btnLimpiar As Button
+    Friend WithEvents txtXMLSinFirma As RichTextBox
+    Friend WithEvents btnRutaCertificado As Button
+    Friend WithEvents Label11 As Label
+    Friend WithEvents txtPathCertificado As TextBox
+    Friend WithEvents rbCertInstalado As RadioButton
+    Friend WithEvents rbArchivo As RadioButton
+    Friend WithEvents Label12 As Label
+    Friend WithEvents txtCertificadoPIN As TextBox
+    Friend WithEvents Label13 As Label
 End Class

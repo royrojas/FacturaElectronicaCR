@@ -49,14 +49,14 @@
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.7.4137.9688, Culture=neutral, PublicKeyToken=a4292a325f69b123, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CafeBritt.CR.WS.FacturasXML\CafeBritt.Test\bin\Debug\BouncyCastle.Crypto.dll</HintPath>
+      <HintPath>..\COMPONENTES\Librerias\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="FirmaXadesNet">
       <HintPath>..\COMPONENTES\Librerias\FirmaXadesNet.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xades, Version=1.0.5.0, Culture=neutral, PublicKeyToken=52bc0bff8bc72d48, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CafeBritt.CR.WS.FacturasXML\CafeBritt.Test\bin\Debug\Microsoft.Xades.dll</HintPath>
+      <HintPath>..\COMPONENTES\Librerias\Microsoft.Xades.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>

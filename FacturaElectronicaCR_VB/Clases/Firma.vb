@@ -43,9 +43,15 @@ Public Class Firma
     ''' Firma XAdES EPES para la Factura Electrónica de Costa Rica
     ''' </summary>
     ''' <param name="pathXML">Ruta del folder donde se va a escribir el documento firmado</param>
-    Public Sub FirmaXML_Xades(pathXML As String, thumbprintCertificado As String)
+    Public Sub FirmaXML_Xades(pathXML As String, certificado As String, esThumbprint As Boolean, clave As String)
         Try
-            Dim cert As X509Certificate2 = GetCertificateByThumbprint(thumbprintCertificado)
+            Dim cert As X509Certificate2
+
+            If esThumbprint Then
+                cert = GetCertificateByThumbprint(certificado)
+            Else
+                cert = New X509Certificate2(certificado, clave)
+            End If
 
             ''Ejemplo de un valor Thumbprint: C2E8D9DA714C98ED14B88ECBC4C3E5F3BD64F125
             ''Si no se quiere leer el certificado del repositorio, se puede cargar el certificado directamente

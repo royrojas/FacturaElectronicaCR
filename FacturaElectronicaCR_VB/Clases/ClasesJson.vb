@@ -55,4 +55,5 @@ Public Class Receptor
     Public Property TipoIdentificacion As String
     <JsonProperty("numeroIdentificacion")>
     Public Property numeroIdentificacion As String
+    Public Property sinReceptor As Boolean = False
 End Class

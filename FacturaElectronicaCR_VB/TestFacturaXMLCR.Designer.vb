@@ -301,13 +301,13 @@ Partial Class TestFacturaXMLCR
         Me.txtEmisorTipo.Location = New System.Drawing.Point(304, 425)
         Me.txtEmisorTipo.Name = "txtEmisorTipo"
         Me.txtEmisorTipo.ReadOnly = True
-        Me.txtEmisorTipo.Size = New System.Drawing.Size(35, 20)
+        Me.txtEmisorTipo.Size = New System.Drawing.Size(42, 20)
         Me.txtEmisorTipo.TabIndex = 8
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(614, 428)
+        Me.Label5.Location = New System.Drawing.Point(617, 428)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(28, 13)
         Me.Label5.TabIndex = 13
@@ -315,16 +315,16 @@ Partial Class TestFacturaXMLCR
         '
         'txtReceptorTipo
         '
-        Me.txtReceptorTipo.Location = New System.Drawing.Point(655, 425)
+        Me.txtReceptorTipo.Location = New System.Drawing.Point(658, 425)
         Me.txtReceptorTipo.Name = "txtReceptorTipo"
         Me.txtReceptorTipo.ReadOnly = True
-        Me.txtReceptorTipo.Size = New System.Drawing.Size(35, 20)
+        Me.txtReceptorTipo.Size = New System.Drawing.Size(42, 20)
         Me.txtReceptorTipo.TabIndex = 12
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(361, 428)
+        Me.Label6.Location = New System.Drawing.Point(364, 428)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(91, 13)
         Me.Label6.TabIndex = 11
@@ -332,7 +332,7 @@ Partial Class TestFacturaXMLCR
         '
         'txtReceptorNumero
         '
-        Me.txtReceptorNumero.Location = New System.Drawing.Point(456, 425)
+        Me.txtReceptorNumero.Location = New System.Drawing.Point(459, 425)
         Me.txtReceptorNumero.Name = "txtReceptorNumero"
         Me.txtReceptorNumero.ReadOnly = True
         Me.txtReceptorNumero.Size = New System.Drawing.Size(143, 20)

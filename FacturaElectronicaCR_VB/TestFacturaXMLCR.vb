@@ -7,8 +7,6 @@
                 Exit Sub
             End If
 
-            CargaDatosXML()
-
             If Me.txtThumbprint.Text.Trim.Length = 0 And rbCertInstalado.Checked Then
                 MsgBox("Debe indicar el certificado a usar en la firma")
                 CargaCertificado()
@@ -18,6 +16,18 @@
                 MsgBox("Debe indicar la ruta del folder donde grabar los archivos")
                 CargaFolderSalida()
             End If
+
+            If Me.txtAPIUsuario.Text.Trim.Length = 0 Then
+                MsgBox("Debe indicar el usuario de conexión")
+                CargaFolderSalida()
+            End If
+
+            If Me.txtAPIClave.Text.Trim.Length = 0 Then
+                MsgBox("Debe indicar la clave de conexión")
+                CargaFolderSalida()
+            End If
+
+            CargaDatosXML()
 
             Procesa(Me.txtXMLSinFirma.Text)
         Catch ex As Exception
@@ -70,7 +80,6 @@
         End If
 
         Dim directorio As String = Me.txtFolderSalida.Text
-
         Dim nombreArchivo As String = Me.txtConsecutivo.Text
 
         Dim xmlDocSF As New Xml.XmlDocument

@@ -16,7 +16,7 @@
 //
 // Este programa se distribuye con la esperanza de que sea útil,
 // pero SIN NINGUNA GARANTÍA; sin siquiera la garantía implícita de
-// COMERCIABILIDAD O IDONEIDAD PARA UN PROPÓSITO PARTICULAR.Ver el
+// COMERCIABILIDAD O IDONEIDAD PARA UN PROPÓSITO PARTICULAR. 
 // Licencia pública general menor de GNU para más detalles.
 //
 // Deberías haber recibido una copia de la Licencia Pública General Reducida de GNU
@@ -64,9 +64,14 @@ namespace FacturaElectronicaCR_CS
                 JsonObject.Add(new JProperty("emisor",
                                              new JObject(new JProperty("tipoIdentificacion", objRecepcion.emisor.TipoIdentificacion),
                                                          new JProperty("numeroIdentificacion", objRecepcion.emisor.numeroIdentificacion))));
-                JsonObject.Add(new JProperty("receptor",
+
+                if (objRecepcion.receptor.sinReceptor == false) 
+                {
+                    JsonObject.Add(new JProperty("receptor",
                                              new JObject(new JProperty("tipoIdentificacion", objRecepcion.receptor.TipoIdentificacion),
                                                          new JProperty("numeroIdentificacion", objRecepcion.receptor.numeroIdentificacion))));
+                }
+               
                 JsonObject.Add(new JProperty("comprobanteXml", objRecepcion.comprobanteXml));
 
                 jsonEnvio = JsonObject.ToString();

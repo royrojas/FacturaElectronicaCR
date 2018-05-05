@@ -16,7 +16,7 @@
 
 '' Este programa se distribuye con la esperanza de que sea útil,
 '' pero SIN NINGUNA GARANTÍA; sin siquiera la garantía implícita de
-'' COMERCIABILIDAD O IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Ver el
+'' COMERCIABILIDAD O IDONEIDAD PARA UN PROPÓSITO PARTICULAR.
 '' Licencia pública general menor de GNU para más detalles.
 ''
 '' Deberías haber recibido una copia de la Licencia Pública General Reducida de GNU
@@ -60,7 +60,7 @@ Public Class Comunicacion
                                                                New JProperty("numeroIdentificacion", objRecepcion.emisor.numeroIdentificacion))))
             If objRecepcion.receptor.sinReceptor = False Then
                 JsonObject.Add(New JProperty("receptor", New JObject(New JProperty("tipoIdentificacion", objRecepcion.receptor.TipoIdentificacion),
-                                                                 New JProperty("numeroIdentificacion", objRecepcion.receptor.numeroIdentificacion))))
+                                                                     New JProperty("numeroIdentificacion", objRecepcion.receptor.numeroIdentificacion))))
             End If
             JsonObject.Add(New JProperty("comprobanteXml", objRecepcion.comprobanteXml))
 

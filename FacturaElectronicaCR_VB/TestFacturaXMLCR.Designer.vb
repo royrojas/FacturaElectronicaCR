@@ -357,7 +357,7 @@ Partial Class TestFacturaXMLCR
         'Certificado
         '
         Me.Certificado.AutoSize = True
-        Me.Certificado.Location = New System.Drawing.Point(833, 86)
+        Me.Certificado.Location = New System.Drawing.Point(833, 85)
         Me.Certificado.Name = "Certificado"
         Me.Certificado.Size = New System.Drawing.Size(57, 13)
         Me.Certificado.TabIndex = 17
@@ -365,6 +365,7 @@ Partial Class TestFacturaXMLCR
         '
         'txtThumbprint
         '
+        Me.txtThumbprint.Enabled = False
         Me.txtThumbprint.Location = New System.Drawing.Point(833, 124)
         Me.txtThumbprint.Name = "txtThumbprint"
         Me.txtThumbprint.Size = New System.Drawing.Size(264, 20)
@@ -372,6 +373,7 @@ Partial Class TestFacturaXMLCR
         '
         'btnCargaCertificado
         '
+        Me.btnCargaCertificado.Enabled = False
         Me.btnCargaCertificado.Location = New System.Drawing.Point(1097, 123)
         Me.btnCargaCertificado.Name = "btnCargaCertificado"
         Me.btnCargaCertificado.Size = New System.Drawing.Size(27, 22)
@@ -413,7 +415,7 @@ Partial Class TestFacturaXMLCR
         '
         'btnConsultaClave
         '
-        Me.btnConsultaClave.Location = New System.Drawing.Point(158, 451)
+        Me.btnConsultaClave.Location = New System.Drawing.Point(160, 451)
         Me.btnConsultaClave.Name = "btnConsultaClave"
         Me.btnConsultaClave.Size = New System.Drawing.Size(141, 23)
         Me.btnConsultaClave.TabIndex = 24
@@ -432,7 +434,7 @@ Partial Class TestFacturaXMLCR
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(660, 401)
+        Me.Label10.Location = New System.Drawing.Point(660, 402)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(37, 13)
         Me.Label10.TabIndex = 27
@@ -440,7 +442,7 @@ Partial Class TestFacturaXMLCR
         '
         'txtFecha
         '
-        Me.txtFecha.Location = New System.Drawing.Point(703, 398)
+        Me.txtFecha.Location = New System.Drawing.Point(703, 399)
         Me.txtFecha.Name = "txtFecha"
         Me.txtFecha.ReadOnly = True
         Me.txtFecha.Size = New System.Drawing.Size(120, 20)
@@ -448,7 +450,7 @@ Partial Class TestFacturaXMLCR
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Location = New System.Drawing.Point(303, 451)
+        Me.btnLimpiar.Location = New System.Drawing.Point(307, 451)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(141, 23)
         Me.btnLimpiar.TabIndex = 28

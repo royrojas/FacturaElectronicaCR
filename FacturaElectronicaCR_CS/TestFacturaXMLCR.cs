@@ -29,11 +29,15 @@ namespace FacturaElectronicaCR_CS
                     return;
                 }
 
-                CargaDatosXML();
-                if ((this.txtThumbprint.Text.Trim().Length == 0))
+                if ((this.txtThumbprint.Text.Trim().Length == 0) & (rbCertInstalado.Checked))
                 {
                     MessageBox.Show("Debe indicar el certificado a usar en la firma");
                     CargaCertificado();
+                }
+                else if ((this.txtPathCertificado.Text.Trim().Length == 0))
+                {
+                    MessageBox.Show("Debe indicar la ruta del certificado a usar en la firma");
+                    BuscaCertificado();
                 }
 
                 if ((this.txtFolderSalida.Text.Trim().Length == 0))
@@ -41,6 +45,8 @@ namespace FacturaElectronicaCR_CS
                     MessageBox.Show("Debe indicar la ruta del folder donde grabar los archivos");
                     CargaFolderSalida();
                 }
+
+                CargaDatosXML();
 
                 Procesa(this.txtXMLSinFirma.Text);
             }
@@ -60,8 +66,18 @@ namespace FacturaElectronicaCR_CS
                 this.txtClave.Text = xmlEnvia.GetElementsByTagName("Clave")[0].InnerText;
                 this.txtEmisorNumero.Text = xmlEnvia.GetElementsByTagName("Emisor")[0]["Identificacion"]["Numero"].InnerText;
                 this.txtEmisorTipo.Text = xmlEnvia.GetElementsByTagName("Emisor")[0]["Identificacion"]["Tipo"].InnerText;
-                this.txtReceptorNumero.Text = xmlEnvia.GetElementsByTagName("Receptor")[0]["Identificacion"]["Numero"].InnerText;
-                this.txtReceptorTipo.Text = xmlEnvia.GetElementsByTagName("Receptor")[0]["Identificacion"]["Tipo"].InnerText;
+
+                if (xmlEnvia.GetElementsByTagName("Receptor").Count == 0)
+                {
+                    if (!(xmlEnvia.GetElementsByTagName("Receptor")[0]["Identificacion"] == null))
+                    {
+                        this.txtReceptorNumero.Text = xmlEnvia.GetElementsByTagName("Receptor")[0]["Identificacion"]["Numero"].InnerText;
+                        this.txtReceptorTipo.Text = xmlEnvia.GetElementsByTagName("Receptor")[0]["Identificacion"]["Tipo"].InnerText;
+                    }
+                }
+
+                this.txtFecha.Text = xmlEnvia.GetElementsByTagName("FechaEmision")[0].InnerText;
+
             }
             catch (Exception ex)
             {
@@ -115,9 +131,17 @@ namespace FacturaElectronicaCR_CS
             myEmisor.TipoIdentificacion = this.txtEmisorTipo.Text;
 
             Receptor myReceptor = new Receptor();
-            myReceptor.numeroIdentificacion = this.txtReceptorNumero.Text;
-            myReceptor.TipoIdentificacion = this.txtReceptorTipo.Text;
-
+            if ((this.txtReceptorNumero.Text.Trim().Length > 0))
+            {
+                myReceptor.sinReceptor = false;
+                myReceptor.numeroIdentificacion = this.txtReceptorNumero.Text;
+                myReceptor.TipoIdentificacion = this.txtReceptorTipo.Text;
+            }
+            else
+            {
+                myReceptor.sinReceptor = true;
+            }
+            
             Recepcion myRecepcion = new Recepcion();
             myRecepcion.emisor = myEmisor;
             myRecepcion.receptor = myReceptor;
@@ -298,5 +322,76 @@ namespace FacturaElectronicaCR_CS
                 throw ex;
             }
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            this.LimpiaDatos();
+        }
+
+        private void btnRutaCertificado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BuscaCertificado();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void BuscaCertificado()
+        {
+            try
+            {
+                OpenFileDialog iFile = new OpenFileDialog();
+                iFile.ShowDialog();
+                this.txtPathCertificado.Text = iFile.FileName;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void rbCertInstalado_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ValidaCamposHabilitados();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void ValidaCamposHabilitados()
+        {
+            try
+            {
+                if (rbCertInstalado.Checked)
+                {
+                    txtThumbprint.Enabled = true;
+                    btnCargaCertificado.Enabled = true;
+                    txtPathCertificado.Enabled = false;
+                    btnRutaCertificado.Enabled = false;
+                    txtCertificadoPIN.Enabled = false;
+                }
+                else
+                {
+                    txtThumbprint.Enabled = false;
+                    btnCargaCertificado.Enabled = false;
+                    txtPathCertificado.Enabled = true;
+                    btnRutaCertificado.Enabled = true;
+                    txtCertificadoPIN.Enabled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

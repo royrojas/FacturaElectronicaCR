@@ -68,6 +68,8 @@ namespace FacturaElectronicaCR_CS
 
         [JsonProperty("numeroIdentificacion")]
         public string numeroIdentificacion { get; set; }
+
+        public Boolean sinReceptor { get; set; }
     }
 }
 

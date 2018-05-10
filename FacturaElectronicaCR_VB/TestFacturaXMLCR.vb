@@ -28,7 +28,6 @@
             End If
 
             CargaDatosXML()
-
             Procesa(Me.txtXMLSinFirma.Text)
         Catch ex As Exception
             MsgBox(ex.Message)

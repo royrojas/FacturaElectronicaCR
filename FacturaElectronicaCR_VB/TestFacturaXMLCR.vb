@@ -164,7 +164,6 @@
         End If
 
         MsgBox(enviaFactura.mensajeRespuesta)
-
     End Sub
 
     Private Sub btnConsultaClave_Click(sender As Object, e As EventArgs) Handles btnConsultaClave.Click

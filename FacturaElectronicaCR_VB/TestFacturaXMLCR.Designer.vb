@@ -70,6 +70,7 @@ Partial Class TestFacturaXMLCR
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txtCertificadoPIN = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.btnPrecargar = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -263,7 +264,7 @@ Partial Class TestFacturaXMLCR
         '
         'btnProcesar
         '
-        Me.btnProcesar.Location = New System.Drawing.Point(13, 451)
+        Me.btnProcesar.Location = New System.Drawing.Point(159, 451)
         Me.btnProcesar.Name = "btnProcesar"
         Me.btnProcesar.Size = New System.Drawing.Size(141, 23)
         Me.btnProcesar.TabIndex = 5
@@ -415,7 +416,7 @@ Partial Class TestFacturaXMLCR
         '
         'btnConsultaClave
         '
-        Me.btnConsultaClave.Location = New System.Drawing.Point(160, 451)
+        Me.btnConsultaClave.Location = New System.Drawing.Point(306, 451)
         Me.btnConsultaClave.Name = "btnConsultaClave"
         Me.btnConsultaClave.Size = New System.Drawing.Size(141, 23)
         Me.btnConsultaClave.TabIndex = 24
@@ -450,7 +451,7 @@ Partial Class TestFacturaXMLCR
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Location = New System.Drawing.Point(307, 451)
+        Me.btnLimpiar.Location = New System.Drawing.Point(453, 451)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(141, 23)
         Me.btnLimpiar.TabIndex = 28
@@ -529,11 +530,21 @@ Partial Class TestFacturaXMLCR
         Me.Label13.TabIndex = 36
         Me.Label13.Text = "PIN"
         '
+        'btnPrecargar
+        '
+        Me.btnPrecargar.Location = New System.Drawing.Point(12, 451)
+        Me.btnPrecargar.Name = "btnPrecargar"
+        Me.btnPrecargar.Size = New System.Drawing.Size(141, 23)
+        Me.btnPrecargar.TabIndex = 37
+        Me.btnPrecargar.Text = "Precargar Datos"
+        Me.btnPrecargar.UseVisualStyleBackColor = True
+        '
         'TestFacturaXMLCR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1140, 484)
+        Me.Controls.Add(Me.btnPrecargar)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.txtCertificadoPIN)
         Me.Controls.Add(Me.Label12)
@@ -639,4 +650,5 @@ Partial Class TestFacturaXMLCR
     Friend WithEvents Label12 As Label
     Friend WithEvents txtCertificadoPIN As TextBox
     Friend WithEvents Label13 As Label
+    Friend WithEvents btnPrecargar As Button
 End Class

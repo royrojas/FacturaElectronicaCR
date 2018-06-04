@@ -39,6 +39,11 @@
             Dim xmlEnvia As New Xml.XmlDocument
             xmlEnvia.LoadXml(Me.txtXMLSinFirma.Text)
 
+            If TypeOf xmlEnvia.FirstChild Is System.Xml.XmlDeclaration Then
+                xmlEnvia.RemoveChild(xmlEnvia.FirstChild)
+            End If
+            xmlEnvia.PreserveWhitespace = False
+
             Me.txtConsecutivo.Text = xmlEnvia.GetElementsByTagName("NumeroConsecutivo")(0).InnerText
             Me.txtClave.Text = xmlEnvia.GetElementsByTagName("Clave")(0).InnerText
             Me.txtEmisorNumero.Text = xmlEnvia.GetElementsByTagName("Emisor")(0)("Identificacion")("Numero").InnerText
@@ -303,4 +308,11 @@
         End Try
     End Sub
 
+    Private Sub btnPrecargar_Click(sender As Object, e As EventArgs) Handles btnPrecargar.Click
+        Try
+            CargaDatosXML()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 End Class

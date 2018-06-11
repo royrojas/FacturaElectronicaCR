@@ -67,6 +67,9 @@ Puede descargar los fuentes originales del dll para la Firma en el sitio web y G
       FileStream fs = new FileStream((pathXMLSinFirma), FileMode.Open);
       FirmaXadesNet.Signature.SignatureDocument docFirmado = xadesService.Sign(fs, parametros);
       docFirmado.Save((pathXMLFirmado));
+      
+## Artículos Facturación Electrónica
+http://www.royrojas.com/tag/factura-electronica-costa-rica/
 
 ## Contacto
 Roy Rojas | royrojas@dotnetcr.com | www.royrojas.com | www.dotnetcr.com

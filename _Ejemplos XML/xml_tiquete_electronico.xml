@@ -1,0 +1,81 @@
+﻿<TiqueteElectronico xmlns="https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/tiqueteElectronico" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Clave>50602071800344445555903900065040000001009117003273</Clave>
+  <NumeroConsecutivo>03900065040000001009</NumeroConsecutivo>
+  <FechaEmision>2018-07-02T10:00:57-06:00</FechaEmision>
+  <Emisor>
+    <Nombre>NOMBRE DEL EMISOR</Nombre>
+    <Identificacion>
+      <Tipo>02</Tipo>
+      <Numero>3444455559</Numero>
+    </Identificacion>
+    <Ubicacion>
+      <Provincia>4</Provincia>
+      <Canton>04</Canton>
+      <Distrito>04</Distrito>
+      <Barrio>02</Barrio>
+      <OtrasSenas>Heredia Santa Barbara</OtrasSenas>
+    </Ubicacion>
+    <Telefono>
+      <CodigoPais>506</CodigoPais>
+      <NumTelefono>22445588</NumTelefono>
+    </Telefono>
+    <CorreoElectronico>correo@emisor.com</CorreoElectronico>
+  </Emisor>
+  <CondicionVenta>01</CondicionVenta>
+  <MedioPago>01</MedioPago>
+  <DetalleServicio>
+    <LineaDetalle>
+      <NumeroLinea>1</NumeroLinea>
+      <Codigo>
+        <Tipo>04</Tipo>
+        <Codigo>CR306801</Codigo>
+      </Codigo>
+      <Cantidad>1</Cantidad>
+      <UnidadMedida>Unid</UnidadMedida>
+      <Detalle>NOMBRE PRODUCTO O SERVICIO</Detalle>
+      <PrecioUnitario>4190.00</PrecioUnitario>
+      <MontoTotal>4190.00</MontoTotal>
+      <MontoDescuento>1466.50</MontoDescuento>
+      <NaturalezaDescuento>Descuento al cliente</NaturalezaDescuento>
+      <SubTotal>2723.50</SubTotal>
+      <MontoTotalLinea>2723.50</MontoTotalLinea>
+    </LineaDetalle>
+    <LineaDetalle>
+      <NumeroLinea>2</NumeroLinea>
+      <Codigo>
+        <Tipo>04</Tipo>
+        <Codigo>224477</Codigo>
+      </Codigo>
+      <Cantidad>1</Cantidad>
+      <UnidadMedida>Unid</UnidadMedida>
+      <Detalle>NOMBRE DEL PRODUCTO</Detalle>
+      <PrecioUnitario>5507.62</PrecioUnitario>
+      <MontoTotal>5507.62</MontoTotal>
+      <MontoDescuento>1797.00</MontoDescuento>
+      <NaturalezaDescuento>Descuento al cliente</NaturalezaDescuento>
+      <SubTotal>3710.62</SubTotal>
+      <Impuesto>
+        <Codigo>01</Codigo>
+        <Tarifa>13.0000</Tarifa>
+        <Monto>482.38</Monto>
+      </Impuesto>
+      <MontoTotalLinea>4193.00</MontoTotalLinea>
+    </LineaDetalle>
+  </DetalleServicio>
+  <ResumenFactura>
+    <CodigoMoneda>CRC</CodigoMoneda>
+    <TotalMercanciasGravadas>5507.6200</TotalMercanciasGravadas>
+    <TotalMercanciasExentas>4190.0000</TotalMercanciasExentas>
+    <TotalGravado>5507.6200</TotalGravado>
+    <TotalExento>4190.0000</TotalExento>
+    <TotalVenta>9697.6200</TotalVenta>
+    <TotalDescuentos>3263.5000</TotalDescuentos>
+    <TotalVentaNeta>6434.1200</TotalVentaNeta>
+    <TotalImpuesto>482.3800</TotalImpuesto>
+    <TotalComprobante>6916.5000</TotalComprobante>
+  </ResumenFactura>
+  <Normativa>
+    <NumeroResolucion>DGT-R-48-2016</NumeroResolucion>
+    <FechaResolucion>20-02-2017 08:05:00</FechaResolucion>
+  </Normativa>
+</TiqueteElectronico>

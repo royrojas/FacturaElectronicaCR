@@ -1,0 +1,135 @@
+﻿<FacturaElectronica xmlns="https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/facturaElectronica" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <Clave>50602071800310115388888800099010000000943101004382</Clave>
+  <NumeroConsecutivo>00199999010000000943</NumeroConsecutivo>
+  <FechaEmision>2018-07-02T10:07:55</FechaEmision>
+  <Emisor>
+    <Nombre>NOMBRE EMISOR</Nombre>
+    <Identificacion>
+      <Tipo>02</Tipo>
+      <Numero>3888888000</Numero>
+    </Identificacion>
+    <Ubicacion>
+      <Provincia>4</Provincia>
+      <Canton>04</Canton>
+      <Distrito>04</Distrito>
+      <Barrio>02</Barrio>
+      <OtrasSenas>Heredia Santa Barbara</OtrasSenas>
+    </Ubicacion>
+    <Telefono>
+      <CodigoPais>506</CodigoPais>
+      <NumTelefono>22225555</NumTelefono>
+    </Telefono>
+    <CorreoElectronico>correo@micompania.com</CorreoElectronico>
+  </Emisor>
+  <Receptor>
+    <Nombre>NOMBRE RECEPTOR (OPCIONAL)</Nombre>
+    <Identificacion>
+      <Tipo>02</Tipo>
+      <Numero>3555566667</Numero>
+    </Identificacion>
+    <CorreoElectronico>correo@correoreceptor.com</CorreoElectronico>
+  </Receptor>
+  <CondicionVenta>02</CondicionVenta>
+  <PlazoCredito>30</PlazoCredito>
+  <MedioPago>04</MedioPago>
+  <DetalleServicio>
+    <LineaDetalle>
+      <NumeroLinea>1</NumeroLinea>
+      <Codigo>
+        <Tipo>04</Tipo>
+        <Codigo>7579</Codigo>
+      </Codigo>
+      <Cantidad>2.00</Cantidad>
+      <UnidadMedida>Unid</UnidadMedida>
+      <Detalle>NOMBRE PRODUCTO</Detalle>
+      <PrecioUnitario>80820.000</PrecioUnitario>
+      <MontoTotal>161640.000</MontoTotal>
+      <MontoDescuento>0.00000</MontoDescuento>
+      <NaturalezaDescuento>Descuento al cliente</NaturalezaDescuento>
+      <SubTotal>161640.00000</SubTotal>
+      <Impuesto>
+        <Codigo>01</Codigo>
+        <Tarifa>0.00</Tarifa>
+        <Monto>0.00000</Monto>
+      </Impuesto>
+      <MontoTotalLinea>161640.00000</MontoTotalLinea>
+    </LineaDetalle>
+    <LineaDetalle>
+      <NumeroLinea>2</NumeroLinea>
+      <Codigo>
+        <Tipo>04</Tipo>
+        <Codigo>11795</Codigo>
+      </Codigo>
+      <Cantidad>1.00</Cantidad>
+      <UnidadMedida>Unid</UnidadMedida>
+      <Detalle>NOMBRE DEL PRODUCTO</Detalle>
+      <PrecioUnitario>7820.000</PrecioUnitario>
+      <MontoTotal>7820.000</MontoTotal>
+      <MontoDescuento>0.00000</MontoDescuento>
+      <NaturalezaDescuento>Descuento al cliente</NaturalezaDescuento>
+      <SubTotal>7820.00000</SubTotal>
+      <Impuesto>
+        <Codigo>01</Codigo>
+        <Tarifa>13.00</Tarifa>
+        <Monto>1016.60000</Monto>
+      </Impuesto>
+      <MontoTotalLinea>8836.60000</MontoTotalLinea>
+    </LineaDetalle>
+    <LineaDetalle>
+      <NumeroLinea>3</NumeroLinea>
+      <Codigo>
+        <Tipo>04</Tipo>
+        <Codigo>25</Codigo>
+      </Codigo>
+      <Cantidad>1.00</Cantidad>
+      <UnidadMedida>Unid</UnidadMedida>
+      <Detalle>NOMBRE DEL PRODUCTO</Detalle>
+      <PrecioUnitario>9345.000</PrecioUnitario>
+      <MontoTotal>9345.000</MontoTotal>
+      <MontoDescuento>0.00000</MontoDescuento>
+      <NaturalezaDescuento>Descuento al cliente</NaturalezaDescuento>
+      <SubTotal>9345.00000</SubTotal>
+      <MontoTotalLinea>9345.00000</MontoTotalLinea>
+    </LineaDetalle>
+    <LineaDetalle>
+      <NumeroLinea>4</NumeroLinea>
+      <Codigo>
+        <Tipo>04</Tipo>
+        <Codigo>11162</Codigo>
+      </Codigo>
+      <Cantidad>1.00</Cantidad>
+      <UnidadMedida>Unid</UnidadMedida>
+      <Detalle>NOMBRE DEL PRODUCTO</Detalle>
+      <PrecioUnitario>8695.000</PrecioUnitario>
+      <MontoTotal>8695.000</MontoTotal>
+      <MontoDescuento>0.00000</MontoDescuento>
+      <NaturalezaDescuento>Descuento al cliente</NaturalezaDescuento>
+      <SubTotal>8695.00000</SubTotal>
+      <Impuesto>
+        <Codigo>01</Codigo>
+        <Tarifa>13.00</Tarifa>
+        <Monto>1130.35000</Monto>
+      </Impuesto>
+      <MontoTotalLinea>9825.35000</MontoTotalLinea>
+    </LineaDetalle>
+  </DetalleServicio>
+  <ResumenFactura>
+    <CodigoMoneda>CRC</CodigoMoneda>
+    <TipoCambio>1.00000</TipoCambio>
+    <TotalServGravados>0.00000</TotalServGravados>
+    <TotalServExentos>0.00000</TotalServExentos>
+    <TotalMercanciasGravadas>16515.00000</TotalMercanciasGravadas>
+    <TotalMercanciasExentas>170985.00000</TotalMercanciasExentas>
+    <TotalGravado>16515.00000</TotalGravado>
+    <TotalExento>170985.00000</TotalExento>
+    <TotalVenta>187500.00000</TotalVenta>
+    <TotalDescuentos>0.00000</TotalDescuentos>
+    <TotalVentaNeta>187500.00000</TotalVentaNeta>
+    <TotalImpuesto>2146.95000</TotalImpuesto>
+    <TotalComprobante>189646.95000</TotalComprobante>
+  </ResumenFactura>
+  <Normativa>
+    <NumeroResolucion>DGT-R-48-2016</NumeroResolucion>
+    <FechaResolucion>07-10-2016 01:00:00</FechaResolucion>
+  </Normativa>
+</FacturaElectronica>

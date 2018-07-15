@@ -44,6 +44,11 @@
             End If
             xmlEnvia.PreserveWhitespace = False
 
+            If xmlEnvia.FirstChild.Name = "MensajeReceptor" Then
+                CargaDatosXMLMensajeReceptor(xmlEnvia)
+                Exit Sub
+            End If
+
             Me.txtConsecutivo.Text = xmlEnvia.GetElementsByTagName("NumeroConsecutivo")(0).InnerText
             Me.txtClave.Text = xmlEnvia.GetElementsByTagName("Clave")(0).InnerText
             Me.txtEmisorNumero.Text = xmlEnvia.GetElementsByTagName("Emisor")(0)("Identificacion")("Numero").InnerText
@@ -62,6 +67,20 @@
         End Try
     End Sub
 
+    Private Sub CargaDatosXMLMensajeReceptor(xmlEnvia As Xml.XmlDocument)
+        Try
+            Me.txtConsecutivo.Text = xmlEnvia.GetElementsByTagName("NumConsecutivoReceptor")(0).InnerText
+            Me.txtClave.Text = xmlEnvia.GetElementsByTagName("Clave")(0).InnerText
+            Me.txtFecha.Text = xmlEnvia.GetElementsByTagName("FechaEmisionDoc")(0).InnerText
+
+            Me.txtEmisorNumero.Text = xmlEnvia.GetElementsByTagName("NumeroCedulaReceptor")(0).InnerText
+            Me.txtReceptorNumero.Text = xmlEnvia.GetElementsByTagName("NumConsecutivoReceptor")(0).InnerText
+
+        Catch ex As Exception
+            Throw
+        End Try
+    End Sub
+
     Private Sub LimpiaDatos()
         Me.txtConsecutivo.ResetText()
         Me.txtClave.ResetText()
@@ -75,6 +94,38 @@
         Me.txtJSONRespuesta.ResetText()
         Me.txtRespuestaHacienda.ResetText()
         Me.txtTokenHacienda.ResetText()
+    End Sub
+
+    Public Sub ProcesaMensajeRespuesta()
+        Try
+
+            If Not Me.txtFolderSalida.Text.EndsWith("\") Then
+                Me.txtFolderSalida.Text += "\"
+            End If
+
+            Dim directorio As String = Me.txtFolderSalida.Text
+            Dim nombreArchivo As String = Me.txtConsecutivo.Text
+
+            Dim xmlDocSF As New Xml.XmlDocument
+            xmlDocSF.LoadXml(Me.txtXMLSinFirma.Text)
+
+            xmlDocSF.Save(directorio & nombreArchivo & "_R01_SF.xml")
+
+            Dim xmlTextWriter As New Xml.XmlTextWriter(directorio & nombreArchivo & "_R01_SF.xml", New System.Text.UTF8Encoding(False))
+            xmlDocSF.WriteTo(xmlTextWriter)
+            xmlTextWriter.Close()
+            xmlDocSF = Nothing
+
+            Dim certificado As String = ""
+            If rbCertInstalado.Checked Then
+                certificado = txtThumbprint.Text
+            Else
+                certificado = txtPathCertificado.Text
+            End If
+
+        Catch ex As Exception
+            Throw
+        End Try
     End Sub
 
     Public Sub Procesa(xmlFactura As String)

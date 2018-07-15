@@ -63,6 +63,10 @@
     <Compile Include="Certificado.Designer.cs">
       <DependentUpon>Certificado.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClasesDatos\Datos.cs" />
+    <Compile Include="ClasesDatos\Emisor.cs" />
+    <Compile Include="ClasesDatos\FacturaElectronicaCR.cs" />
+    <Compile Include="ClasesDatos\Receptor.cs" />
     <Compile Include="Clases\ClasesJson.cs" />
     <Compile Include="Clases\Comunicacion.cs" />
     <Compile Include="Clases\Firma.cs" />

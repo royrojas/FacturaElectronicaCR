@@ -393,5 +393,18 @@ namespace FacturaElectronicaCR_CS
             }
         }
 
+        private void btnConsecutivo_Clave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CreaClave_NumeroConsecutivo creaNumeroClave = new CreaClave_NumeroConsecutivo();
+                creaNumeroClave.ShowDialog();                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
 }

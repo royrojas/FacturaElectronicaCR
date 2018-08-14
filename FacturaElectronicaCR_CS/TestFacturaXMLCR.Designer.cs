@@ -76,6 +76,7 @@
             this.btnRutaCertificado = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.txtPathCertificado = new System.Windows.Forms.TextBox();
+            this.btnConsecutivo_Clave = new System.Windows.Forms.Button();
             this.TabControl1.SuspendLayout();
             this.TabPage1.SuspendLayout();
             this.TabPage2.SuspendLayout();
@@ -546,11 +547,22 @@
             this.txtPathCertificado.Size = new System.Drawing.Size(210, 20);
             this.txtPathCertificado.TabIndex = 57;
             // 
+            // btnConsecutivo_Clave
+            // 
+            this.btnConsecutivo_Clave.Location = new System.Drawing.Point(833, 451);
+            this.btnConsecutivo_Clave.Name = "btnConsecutivo_Clave";
+            this.btnConsecutivo_Clave.Size = new System.Drawing.Size(283, 23);
+            this.btnConsecutivo_Clave.TabIndex = 62;
+            this.btnConsecutivo_Clave.Text = "Crea Número Consecutivo y Clave";
+            this.btnConsecutivo_Clave.UseVisualStyleBackColor = true;
+            this.btnConsecutivo_Clave.Click += new System.EventHandler(this.btnConsecutivo_Clave_Click);
+            // 
             // TestFacturaXMLCR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1140, 484);
+            this.Controls.Add(this.btnConsecutivo_Clave);
             this.Controls.Add(this.Label13);
             this.Controls.Add(this.txtCertificadoPIN);
             this.Controls.Add(this.btnRutaCertificado);
@@ -658,5 +670,6 @@
         internal System.Windows.Forms.Button btnRutaCertificado;
         internal System.Windows.Forms.Label label12;
         internal System.Windows.Forms.TextBox txtPathCertificado;
+        internal System.Windows.Forms.Button btnConsecutivo_Clave;
     }
 }

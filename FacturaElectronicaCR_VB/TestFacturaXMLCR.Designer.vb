@@ -542,7 +542,7 @@ Partial Class TestFacturaXMLCR
         '
         'btnConsecutivo_Clave
         '
-        Me.btnConsecutivo_Clave.Location = New System.Drawing.Point(845, 451)
+        Me.btnConsecutivo_Clave.Location = New System.Drawing.Point(833, 451)
         Me.btnConsecutivo_Clave.Name = "btnConsecutivo_Clave"
         Me.btnConsecutivo_Clave.Size = New System.Drawing.Size(283, 23)
         Me.btnConsecutivo_Clave.TabIndex = 38

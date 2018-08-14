@@ -70,6 +70,9 @@ Puede descargar los fuentes originales del dll para la Firma en el sitio web y G
       
 ## Artículos Facturación Electrónica
 http://www.royrojas.com/tag/factura-electronica-costa-rica/
+http://www.royrojas.com/numero-consecutivo-y-clave-en-la-factura-electronica-en-costa-rica/
+http://www.royrojas.com/mensaje-receptor-para-la-factura-electronica-en-costa-rica/
+http://www.royrojas.com/encabezados-del-xml-para-la-factura-y-tiquete-electronico-en-costa-rica/
 
 ## Contacto
 Roy Rojas | royrojas@dotnetcr.com | www.royrojas.com | www.dotnetcr.com

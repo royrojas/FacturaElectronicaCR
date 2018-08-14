@@ -366,4 +366,10 @@
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Sub btnConsecutivo_Clave_Click(sender As Object, e As EventArgs) Handles btnConsecutivo_Clave.Click
+        Dim iCreaConsecutivo As New CrearClave_NumeroConsecutivo
+        iCreaConsecutivo.ShowDialog()
+    End Sub
+
 End Class

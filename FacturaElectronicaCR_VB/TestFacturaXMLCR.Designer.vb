@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class TestFacturaXMLCR
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class TestFacturaXMLCR
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -71,6 +71,7 @@ Partial Class TestFacturaXMLCR
         Me.txtCertificadoPIN = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.btnPrecargar = New System.Windows.Forms.Button()
+        Me.btnConsecutivo_Clave = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -539,11 +540,21 @@ Partial Class TestFacturaXMLCR
         Me.btnPrecargar.Text = "Precargar Datos"
         Me.btnPrecargar.UseVisualStyleBackColor = True
         '
+        'btnConsecutivo_Clave
+        '
+        Me.btnConsecutivo_Clave.Location = New System.Drawing.Point(845, 451)
+        Me.btnConsecutivo_Clave.Name = "btnConsecutivo_Clave"
+        Me.btnConsecutivo_Clave.Size = New System.Drawing.Size(283, 23)
+        Me.btnConsecutivo_Clave.TabIndex = 38
+        Me.btnConsecutivo_Clave.Text = "Crea Número Consecutivo y Clave"
+        Me.btnConsecutivo_Clave.UseVisualStyleBackColor = True
+        '
         'TestFacturaXMLCR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1140, 484)
+        Me.Controls.Add(Me.btnConsecutivo_Clave)
         Me.Controls.Add(Me.btnPrecargar)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.txtCertificadoPIN)
@@ -651,4 +662,5 @@ Partial Class TestFacturaXMLCR
     Friend WithEvents txtCertificadoPIN As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents btnPrecargar As Button
+    Friend WithEvents btnConsecutivo_Clave As Button
 End Class

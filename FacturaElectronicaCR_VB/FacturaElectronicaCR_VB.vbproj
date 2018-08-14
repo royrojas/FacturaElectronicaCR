@@ -64,7 +64,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -97,6 +99,12 @@
     <Compile Include="Clases\Firma.vb" />
     <Compile Include="Clases\Funciones.vb" />
     <Compile Include="Clases\TokenHacienda.vb" />
+    <Compile Include="CrearClave_NumeroConsecutivo.Designer.vb">
+      <DependentUpon>CrearClave_NumeroConsecutivo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CrearClave_NumeroConsecutivo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TestFacturaXMLCR.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +132,10 @@
     <EmbeddedResource Include="Certificado.resx">
       <DependentUpon>Certificado.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrearClave_NumeroConsecutivo.resx">
+      <DependentUpon>CrearClave_NumeroConsecutivo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -146,6 +158,11 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Imagen\Clave.JPG" />
+    <Content Include="Imagen\Consecutivo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

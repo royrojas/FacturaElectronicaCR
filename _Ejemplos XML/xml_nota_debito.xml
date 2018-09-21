@@ -1,0 +1,67 @@
+﻿<NotaDebitoElectronica xmlns="https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/notaDebitoElectronica" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Clave>50628061800344443333501300017030000000001101003255</Clave>
+  <NumeroConsecutivo>01300017030000000001</NumeroConsecutivo>
+  <FechaEmision>2018-06-28T10:54:49-06:00</FechaEmision>
+  <Emisor>
+    <Nombre>NOMBRE EMISOR</Nombre>
+    <Identificacion>
+      <Tipo>02</Tipo>
+      <Numero>3444433335</Numero>
+    </Identificacion>
+    <Ubicacion>
+      <Provincia>4</Provincia>
+      <Canton>04</Canton>
+      <Distrito>04</Distrito>
+      <Barrio>02</Barrio>
+      <OtrasSenas>Heredia Santa Barbara</OtrasSenas>
+    </Ubicacion>
+    <Telefono>
+      <CodigoPais>506</CodigoPais>
+      <NumTelefono>22771500</NumTelefono>
+    </Telefono>
+    <CorreoElectronico>corre@emisor.com</CorreoElectronico>
+  </Emisor>
+  <CondicionVenta>01</CondicionVenta>
+  <DetalleServicio>
+    <LineaDetalle>
+      <NumeroLinea>1</NumeroLinea>
+      <Codigo>
+        <Tipo>04</Tipo>
+        <Codigo>96808</Codigo>
+      </Codigo>
+      <Cantidad>1</Cantidad>
+      <UnidadMedida>Unid</UnidadMedida>
+      <Detalle>NOMBRE DEL PRODUCTO</Detalle>
+      <PrecioUnitario>79.65</PrecioUnitario>
+      <MontoTotal>79.65</MontoTotal>
+      <SubTotal>79.65</SubTotal>
+      <Impuesto>
+        <Codigo>01</Codigo>
+        <Tarifa>13.0000</Tarifa>
+        <Monto>10.35</Monto>
+      </Impuesto>
+      <MontoTotalLinea>90.00</MontoTotalLinea>
+    </LineaDetalle>
+  </DetalleServicio>
+  <ResumenFactura>
+    <CodigoMoneda>CRC</CodigoMoneda>
+    <TotalMercanciasGravadas>79.6500</TotalMercanciasGravadas>
+    <TotalGravado>79.6500</TotalGravado>
+    <TotalVenta>79.6500</TotalVenta>
+    <TotalDescuentos>0.0000</TotalDescuentos>
+    <TotalVentaNeta>79.6500</TotalVentaNeta>
+    <TotalImpuesto>10.3500</TotalImpuesto>
+    <TotalComprobante>90.0000</TotalComprobante>
+  </ResumenFactura>
+  <InformacionReferencia>
+    <TipoDoc>04</TipoDoc>
+    <Numero>01300017040000000002</Numero>
+    <FechaEmision>2018-06-28T00:00:00-06:00</FechaEmision>
+    <Codigo>04</Codigo>
+    <Razon>Nota de credito en punto de venta</Razon>
+  </InformacionReferencia>
+  <Normativa>
+    <NumeroResolucion>DGT-R-48-2016</NumeroResolucion>
+    <FechaResolucion>20-02-2017 08:05:00</FechaResolucion>
+  </Normativa>
+</NotaDebitoElectronica>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MensajeReceptor xmlns="https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/mensajeReceptor" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Clave>50602071800310115310158889999010000000943101004382</Clave>
+  <NumeroCedulaEmisor>3245678976</NumeroCedulaEmisor>
+  <FechaEmisionDoc>2018-08-17T19:00:33-06:00</FechaEmisionDoc>
+  <Mensaje>1</Mensaje>
+  <MontoTotalImpuesto>100.00</MontoTotalImpuesto>
+  <TotalFactura>1000.00</TotalFactura>
+  <NumeroCedulaReceptor>3245678976</NumeroCedulaReceptor>
+  <NumeroConsecutivoReceptor>00197799010000000933</NumeroConsecutivoReceptor>
+</MensajeReceptor>

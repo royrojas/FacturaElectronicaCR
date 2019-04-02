@@ -83,7 +83,7 @@
             Dim Clave As String = ""
             Clave = CodigoPais
             Clave += Dia.PadLeft(2, "0")
-            Clave += Mes.PadLeft(2, "2")
+            Clave += Mes.PadLeft(2, "0")
             Clave += Anno.PadLeft(2, "0")
             Clave += NumeroIdentifiaccion.PadLeft(12, "0")
             Clave += NumeracionConsecutiva

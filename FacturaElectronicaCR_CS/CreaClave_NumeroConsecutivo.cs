@@ -156,7 +156,7 @@ namespace FacturaElectronicaCR_CS
                 string Clave = "";
                 Clave = CodigoPais;
                 Clave = (Clave + Dia.PadLeft(2, '0'));
-                Clave = (Clave + Mes.PadLeft(2, '2'));
+                Clave = (Clave + Mes.PadLeft(2, '0'));
                 Clave = (Clave + Anno.PadLeft(2, '0'));
                 Clave = (Clave + NumeroIdentifiaccion.PadLeft(12, '0'));
                 Clave = (Clave + NumeracionConsecutiva);

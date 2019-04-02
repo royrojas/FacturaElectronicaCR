@@ -1,4 +1,5 @@
 ﻿Public Class TestFacturaXMLCR
+
     Private Sub btnProcesar_Click(sender As Object, e As EventArgs) Handles btnProcesar.Click
         Try
             If Me.txtXMLSinFirma.Text.Trim.Length = 0 Then
@@ -176,7 +177,7 @@
         myRecepcion.receptor = myReceptor
 
         myRecepcion.clave = Me.txtClave.Text
-        myRecepcion.fecha = Me.txtFecha.Text
+        myRecepcion.fecha = CDate(Me.txtFecha.Text).ToString("yyyy-MM-ddTHH:mm:sszzz")
         ''Now.ToString("yyyy-MM-ddTHH:mm:sszzz")
         myRecepcion.comprobanteXml = Funciones.EncodeStrToBase64(xmlElectronica.OuterXml)
 

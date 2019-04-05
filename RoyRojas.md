@@ -7,6 +7,9 @@ El proyecto de Factura Electrónica nació por la necesidad de tener un ejemplo 
 
 __Roy Rojas__ es el líder de este proyecto __Open Source__, el cual fue creado para la comunidad y es de libre uso.
 
+### Contacto
+Roy Rojas | royrojas@dotnetcr.com | www.royrojas.com | www.dotnetcr.com | www.royrojas.dev |
+
 
 
 

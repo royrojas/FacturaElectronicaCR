@@ -75,5 +75,5 @@ http://www.royrojas.com/mensaje-receptor-para-la-factura-electronica-en-costa-ri
 http://www.royrojas.com/encabezados-del-xml-para-la-factura-y-tiquete-electronico-en-costa-rica/
 
 ## Contacto
-Roy Rojas | royrojas@dotnetcr.com | www.royrojas.com | www.dotnetcr.com | www.royrojas.dev
+Roy Rojas | royrojas@dotnetcr.com | www.royrojas.com | www.dotnetcr.com | www.royrojas.dev |
 

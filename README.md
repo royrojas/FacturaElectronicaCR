@@ -69,10 +69,10 @@ Puede descargar los fuentes originales del dll para la Firma en el sitio web y G
       docFirmado.Save((pathXMLFirmado));
       
 ## Artículos Facturación Electrónica
-http://www.royrojas.com/tag/factura-electronica-costa-rica/ <br>
-http://www.royrojas.com/numero-consecutivo-y-clave-en-la-factura-electronica-en-costa-rica/ <br>
-http://www.royrojas.com/mensaje-receptor-para-la-factura-electronica-en-costa-rica/ <br>
-http://www.royrojas.com/encabezados-del-xml-para-la-factura-y-tiquete-electronico-en-costa-rica/
+Artículos: http://www.royrojas.com/tag/factura-electronica-costa-rica/ <br>
+Ejemplos: http://www.royrojas.com/ejemplos-de-documentos-electronicos-4-3/ <br>
+Estructura Clavce: http://www.royrojas.com/numero-consecutivo-y-clave-en-la-factura-electronica-en-costa-rica/ <br>
+Encabezado XML 4.3: http://www.royrojas.com/encabezados-del-xml-para-los-documentos-de-factura-electronica-costa-rica-4-3/
 
 ## Contacto
 Roy Rojas | royrojas@dotnetcr.com | www.royrojas.com | www.dotnetcr.com | www.royrojas.dev |
